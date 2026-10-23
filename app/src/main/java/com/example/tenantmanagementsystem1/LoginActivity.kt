@@ -42,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
                 ).show()
             } else {
                 val mainIntent = Intent(this, MainActivity::class.java)
+                mainIntent.putExtra("EMAIL", email)   // Step 15: send the email to MainActivity
                 startActivity(mainIntent)
                 finish()   // close Login so Back doesn't return here
             }
